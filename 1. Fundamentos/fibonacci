@@ -1,0 +1,39 @@
+/*----------------------------------------------------------
+SENAI - Técnico em Desenvolvimento de Sistemas
+UC: Internet das Coisas - 2º Módulo
+Cidade: Cascavel - PR
+Aluno: Gabriel Pereira Nunes do Amaral
+Professora: Ana
+
+Descrição: Sequência de Fibonacci
+utilizando dois valores iniciais (0 e 1).
+O programa lê um número inteiro N e exibe
+os N primeiros termos da sequência.
+
+Data: 14/10/2026
+-----------------------------------------------------------*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int a = 0, b = 1;
+
+    for (int i = 0; i < N; i++) {
+        if (i > 0) {
+            cout << " ";
+        }
+
+        cout << a;
+
+        int proximo = a + b;
+        a = b;
+        b = proximo;
+    }
+
+    cout << endl;
+
+    return 0;
+}

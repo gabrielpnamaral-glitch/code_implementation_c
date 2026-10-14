@@ -1,0 +1,49 @@
+/*----------------------------------------------------------
+SENAI - Técnico em Desenvolvimento de Sistemas
+UC: Internet das Coisas - 2º Módulo
+Cidade: Cascavel - PR
+Aluno: Gabriel Pereira Nunes do Amaral
+Professora: Ana
+
+Descrição: Identifica em qual quadrante do plano
+cartesiano um ponto está localizado, utilizando
+os valores de X e Y informados pelo usuário.
+O programa encerra quando X ou Y for igual a zero.
+
+Data: 14/10/2026
+-----------------------------------------------------------/*
+#include <stdio.h>
+
+int main() {
+    //Declaracão das variaveis
+    int x, y;
+
+    
+    while (1) {
+        scanf("%d %d", &x, &y);
+
+        //se X ou Y for igual a zero
+        if (x == 0 || y == 0) {
+            break;
+        }
+
+        // Verificação dos quadrantes
+        if (x > 0 && y > 0) 
+        {
+            printf("primeiro\n");
+        } 
+        else if (x < 0 && y > 0)
+        {
+            printf("segundo\n");
+        } 
+        else if (x < 0 && y < 0) 
+        {
+            printf("terceiro\n");
+        } else 
+        {
+            printf("quarto\n");
+        }
+    }
+
+    return 0;
+}
